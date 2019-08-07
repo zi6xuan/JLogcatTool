@@ -16,7 +16,7 @@ public class LoggerService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMDDhhmm");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmm");
         File path = new File("/sdcard/boej/JLog" + sdf.format(new Date())+".log");
         JLogcatUtil.inst().logcatGet(path);
     }
